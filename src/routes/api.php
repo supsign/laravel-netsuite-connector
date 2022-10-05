@@ -45,8 +45,6 @@ Route::middleware(['guest'])->group(function () {
     });
 
     Route::post('api/netsuite', function (Request $request): Response {
-        $call = NetSuiteCall::create(['body' => $request->getContent()]);
-
         if (!$request->input()) {
             abort(400);
         }
