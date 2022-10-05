@@ -37,7 +37,7 @@ Route::middleware(['guest'])->group(function () {
     })->name('api.auth.loginForToken');
 });
 
-// Route::middleware(['auth:sanctum'])->group(function () {
+Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('api/tokens/create', function (Request $request): array {
         $token = $request->user()->createToken($request->token_name);
 
@@ -66,4 +66,4 @@ Route::middleware(['guest'])->group(function () {
     Route::get('api/netsuite/unparsed', fn (): JsonResponse => response()->json((object)[
         'count' => NetSuiteCall::where('is_parsed', 0)->count()
     ]))->name('api.netsuite.getUnparsed');
-// });
+});
