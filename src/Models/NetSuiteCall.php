@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class NetSuiteCall extends Model
 {
+    protected $guarded = [];
+	
     public function model(): MorphTo
     {
         return $this->morphTo();
