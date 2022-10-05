@@ -21,6 +21,7 @@ return new class extends Migration
             $table->longText('entity_content')->nullable();
             $table->unsignedBigInteger('model_id')->nullable();
             $table->string('model_type')->nullable();
+            $table->longText('body')->nullable();
             $table->timestampTz('remote_timestamp')->nullable();
             $table->timestampsTz();
         });
