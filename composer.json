@@ -1,0 +1,25 @@
+{
+    "name": "supsign/netsuite-connector",
+    "description": "Laravel Extension for netsuite",
+    "keywords": ["composer", "script", "netsuite"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Florian Ratz",
+        "email": "florian.ratz@supsign.ch"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Supsign\\NetsuiteConnector\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Supsign\\NetsuiteConnector\\NetsuiteConnectorServiceProvider"
+            ],
+            "aliases": {
+                "NetsuiteConnector": "Supsign\\NetsuiteConnector\\NetsuiteConnector",
+            }
+        }
+    }
+}
