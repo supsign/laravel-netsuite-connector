@@ -16,10 +16,7 @@
         "laravel": {
             "providers": [
                 "Supsign\\NetsuiteConnector\\LaravelNetsuiteConnectorServiceProvider"
-            ],
-            "aliases": {
-                "NetsuiteConnector": "Supsign\\NetsuiteConnector\\NetsuiteConnector"
-            }
+            ]
         }
     }
 }
