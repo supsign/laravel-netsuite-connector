@@ -10,7 +10,7 @@ class LaravelNetSuiteConnectorServiceProvider extends ServiceProvider
     public function boot() 
     {
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
-        $this->loadRoutesFrom(__DIR__.'/database/routes');
+        $this->loadRoutesFrom(__DIR__.'/routes');
     }
 
     public function register()
