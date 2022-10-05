@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('netsuite_calls', function (Blueprint $table) {
+        Schema::create('net_suite_calls', function (Blueprint $table) {
             $table->id();
             $table->boolean('is_parsed')->default(0);
             $table->string('method')->nullable();
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('netsuite_calls');
+        Schema::dropIfExists('net_suite_calls');
     }
 };
