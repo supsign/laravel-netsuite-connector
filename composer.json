@@ -1,6 +1,6 @@
 {
-    "name": "supsign/netsuite-connector",
-    "description": "Laravel Extension for netsuite",
+    "name": "supsign/laravel-netsuite-connector",
+    "description": "Laravel Extension for connecting netsuite",
     "keywords": ["composer", "script", "netsuite"],
     "license": "MIT",
     "authors": [{

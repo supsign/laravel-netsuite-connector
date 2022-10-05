@@ -4,7 +4,7 @@ namespace Supsign\NetsuiteConnector;
 
 use Illuminate\Support\ServiceProvider;
 
-class NetsuiteConnectorServiceProvider extends ServiceProvider
+class LaravelNetsuiteConnectorServiceProvider extends ServiceProvider
 {
 
     public function boot() 
