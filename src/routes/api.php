@@ -17,7 +17,7 @@ use Supsign\NetsuiteConnector\Models\NetSuiteCall;
 */
 
 Route::middleware(['guest'])->group(function () {
-    Route::post('auth/token', function (Request $request) {
+    Route::post('api/auth/token', function (Request $request) {
         $request->validate([
             $this->username() => 'required|string',
             'password' => 'required|string',
@@ -35,14 +35,14 @@ Route::middleware(['guest'])->group(function () {
     })->name('api.auth.loginForToken');
 });
 
-Route::middleware(['auth:sanctum'])->group(function () {
-    Route::post('tokens/create', function (Request $request) {
+// Route::middleware(['auth:sanctum'])->group(function () {
+    Route::post('api/tokens/create', function (Request $request) {
         $token = $request->user()->createToken($request->token_name);
 
         return ['token' => $token->plainTextToken];
     });
 
-    Route::post('netsuite', function (Request $request) {
+    Route::post('api/netsuite', function (Request $request) {
         $call = NetSuiteCall::create(['body' => $request->getContent()]);
 
         if (!$request->input()) {
@@ -59,7 +59,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
         $call->save();
     })->name('api.netsuite.post');
 
-    Route::get('netsuite/unparsed', fn () => response()->json((object)[
+    Route::get('api/netsuite/unparsed', fn () => response()->json((object)[
         'count' => NetSuiteCall::where('is_parsed', 0)->count()
     ]))->name('api.netsuite.getUnparsed');
-});
+// });
