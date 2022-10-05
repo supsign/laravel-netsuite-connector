@@ -18,7 +18,7 @@
                 "Supsign\\NetsuiteConnector\\LaravelNetsuiteConnectorServiceProvider"
             ],
             "aliases": {
-                "NetsuiteConnector": "Supsign\\NetsuiteConnector\\NetsuiteConnector",
+                "NetsuiteConnector": "Supsign\\NetsuiteConnector\\NetsuiteConnector"
             }
         }
     }
